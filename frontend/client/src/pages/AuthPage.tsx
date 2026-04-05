@@ -20,8 +20,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useLoginMutation, useSignupMutation } from "@/store/authApi";
 import { User } from "@/store/authSlice";
-import logoImg from "@assets/HIgher_taste_logo_1771483400145.png";
 import { toast } from "sonner";
+const logoImg = "/favicon.png";
 
 const AuthPage: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);

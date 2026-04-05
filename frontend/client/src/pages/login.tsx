@@ -14,9 +14,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLoginMutation } from "@/store/authApi";
-import logoImg from "@assets/HIgher_taste_logo_1771483400145.png";
 
 import { toast } from "sonner";
+const logoImg = "/favicon.png";
 
 const LoginPage: React.FC = () => {
   const [, setLocation] = useLocation();

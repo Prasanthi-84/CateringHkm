@@ -19,8 +19,8 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useSignupMutation } from "@/store/authApi";
-import logoImg from "@assets/HIgher_taste_logo_1771483400145.png";
 import { toast } from "sonner";
+const logoImg = "/favicon.png";
 
 
 const SignupPage: React.FC = () => {

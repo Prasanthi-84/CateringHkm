@@ -16,10 +16,9 @@ import {
   MessageSquare
 } from "lucide-react";
 
-import logoImg from "@assets/HIgher_taste_logo_1771483400145.png";
-
 import { useDispatch, useSelector } from "react-redux";
 import { logOut, selectCurrentUser } from "@/store/authSlice";
+const logoImg = "/favicon.png";
 
 export function Sidebar() {
   const [location] = useLocation();
