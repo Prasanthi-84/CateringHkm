@@ -1,0 +1,38 @@
+services:
+  # 1. Backend Service (Express + Socket.io)
+  - type: web
+    name: catering-backend
+    env: node
+    plan: free
+    rootDir: api
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false # Set this in the Render dashboard
+      - key: JWT_SECRET
+        sync: false # Set this in the Render dashboard
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+
+  # 2. Frontend Service (Vite + React)
+  - type: static
+    name: catering-frontend
+    env: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    publishDir: dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: catering-backend
+          property: host
+        # This automatically points your frontend to your backend!
