@@ -22,13 +22,13 @@ services:
         sync: false
 
   # 2. Frontend Service (Vite + React)
-  - type: static
+  - type: web # Render Blueprints use type: web for both servers and static sites
     name: catering-frontend
     env: static
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
-    publishDir: dist
+    staticPublishPath: dist # Formerly publishDir
     envVars:
       - key: VITE_API_URL
         fromService:
