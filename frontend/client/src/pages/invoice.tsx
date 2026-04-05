@@ -6,9 +6,15 @@ import { Download, Printer, CheckCircle2, QrCode } from "lucide-react";
 import { mockOrders } from "@/lib/mockData";
 import { useParams } from "wouter";
 import { Separator } from "@/components/ui/separator";
+<<<<<<< HEAD
+import logoImg from "@assets/HIgher_taste_logo_1771483400145.png";
+
+import { exportSingleOrderToPDF } from "@/lib/exportInvoices";
+=======
 
 import { exportSingleOrderToPDF } from "@/lib/exportInvoices";
 const logoImg = "/favicon.png";
+>>>>>>> deploy-vercel
 
 export default function InvoicePage() {
   const { id } = useParams();

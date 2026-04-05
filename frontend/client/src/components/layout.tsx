@@ -16,9 +16,16 @@ import {
   MessageSquare
 } from "lucide-react";
 
+<<<<<<< HEAD
+import logoImg from "@assets/HIgher_taste_logo_1771483400145.png";
+
+import { useDispatch, useSelector } from "react-redux";
+import { logOut, selectCurrentUser } from "@/store/authSlice";
+=======
 import { useDispatch, useSelector } from "react-redux";
 import { logOut, selectCurrentUser } from "@/store/authSlice";
 const logoImg = "/favicon.png";
+>>>>>>> deploy-vercel
 
 export function Sidebar() {
   const [location] = useLocation();
